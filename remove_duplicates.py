@@ -10,13 +10,13 @@
 
 class Solution:
     def remove_duplicates(self, nums) -> int:
-        remove = 1
+        unique = 1
 
         for place in range(1, len(nums)):
             if nums[place] != nums[place - 1]:
-                nums[remove] = nums[place]
-                remove += 1
+                nums[unique] = nums[place]
+                unique += 1
 
-        return remove
+        return nums
 
 print(Solution().remove_duplicates([0,0,1,1,1,2,2,3,3,4]))
